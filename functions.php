@@ -14,6 +14,14 @@ function my_files() {
 	wp_enqueue_script('main-scripts', get_theme_file_uri('/js/main.js'), NULL, true);
 };
 
+
+function theme_features() {
+	add_theme_support('title-tag');
+}
+
+
 add_action('wp_enqueue_scripts', 'my_files');
+
+add_action('after_setup_theme', 'theme_features');
 
 ?>

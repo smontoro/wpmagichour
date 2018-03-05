@@ -1,6 +1,6 @@
 <?php
 
-	get_header('internal');
+	get_header('page');
 
 	while(have_posts()) {
 		the_post();
