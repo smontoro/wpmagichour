@@ -28,7 +28,7 @@
 		</div>
 		<div class="row">
 			<div class="col-8 pl-5">
-				<img src="http://res.cloudinary.com/irrelevantevan/image/upload/v1506541726/BAUHAUS/paperBoats.jpg" alt="paper boats" id="boats">
+				<img src="<?php echo get_theme_file_uri('/images/paperBoats.jpeg'); ?>" alt="BH" id="boats">
 			</div>
 			<div class="col-4">
 				<img src="http://res.cloudinary.com/irrelevantevan/image/upload/v1506541725/BAUHAUS/BH.png" alt="BH" id="BH">
