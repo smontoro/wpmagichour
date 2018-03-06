@@ -24,7 +24,7 @@
 				the_post(); ?>
 
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="small">Posted by Evan in Uncategorized on 3/1/18</p>
+				<p class="small">Posted by <?php the_author_posts_link(); ?> in <?php echo get_the_category_list(' | '); ?> on <?php the_time('n-j-y'); ?></p>
 				<p><?php the_excerpt(); ?></p>
 
 			<?php }
