@@ -10,9 +10,7 @@
 		<div class="row">
 
 			<div class="col-12 col-lg-8 p-5">
-				<h1><?php 
-					single_cat_title(); ?>
-				</h1>
+				<h1><?php if( is_author()) echo "Posts by "; the_author(); ?></h1>
 				<p class="pl-5"><?php the_archive_description(); ?></p>
 				<button class="btn mt-4 py-3 px-4 d-block text-blue">Learn More</button>
 			</div>
