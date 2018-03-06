@@ -28,6 +28,8 @@
 				<p><?php the_excerpt(); ?></p>
 
 			<?php }
+
+			echo paginate_links();
 		?>	
 	
 	
