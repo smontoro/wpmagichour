@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>">
 <head>
+	<meta charset= "<?php bloginfo('charset')?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body class="<?php body_class(); ?>">
 
 
 <div class="container-fluid bg-blue">
@@ -17,7 +19,12 @@
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNav">
 			    <ul class="navbar-nav ml-auto">
-			      <li class="nav-item">
+			    	<?php wp_nav_menu(array(
+			    			'theme-location' => 'top-navigation'
+			    		)); ?>
+
+
+			    <!--  <li class="nav-item">
 			        <a class="nav-link" href="#">Home</a>
 			      </li>
 			      <li class="nav-item">
@@ -28,7 +35,7 @@
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">Contact</a>
-			      </li>
+			      </li>-->
 			    </ul>
 			  </div>
 			</nav>

@@ -17,11 +17,23 @@ function my_files() {
 
 function theme_features() {
 	add_theme_support('title-tag');
+
+	register_nav_menu('top-navigation', 'Top Navbar');
+	register_nav_menu('footer-navigation', 'Footer Social Links');
 }
 
 
 add_action('wp_enqueue_scripts', 'my_files');
 
 add_action('after_setup_theme', 'theme_features');
+
+
+
+
+
+
+
+
+
 
 ?>

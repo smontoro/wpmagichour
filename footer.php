@@ -21,11 +21,14 @@
 				<div class="col-6 col-md-3 text-right">
 					<h5>Be a sheep</h5>
 					<ul class="list-unstyled">
-						<li>Twitter</li>
+						<?php wp_nav_menu(array(
+			    			'theme-location' => 'footer-navigation'
+			    		)); ?>
+						<!--<li>Twitter</li>
 						<li>Instagram</li>
 						<li>Dribble</li>
 						<li>Facebook</li>
-						<li>Behance</li>
+						<li>Behance</li>-->
 					</ul>
 				</div>
 			</div>
