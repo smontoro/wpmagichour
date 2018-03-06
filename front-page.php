@@ -7,7 +7,18 @@
 		</div>
 		<div class="row text-blue h-100vh">
 			<div class="col-12 col-lg-6 h-100vh bg-dark p-5">
-				<h1 class="vertical-center p-5 animated fadeInLeft">Passionate folks passionate about crafting engaging digital experiences</h1>
+				<h1 class="vertical-center p-5 animated fadeInLeft" id="tagline">
+
+					<?php 
+						$headerTagline = get_theme_mod('header_tagline');
+						if( !empty($headerTagline) ){
+							echo $headerTagline;
+						} else {
+							echo 'Passionate folks passionate about crafting engaging digital experiences';
+						}
+					?>
+
+				</h1>
 			</div>
 			<div class="col-12 col-lg-6 h-100vh bg-img">
 			</div>

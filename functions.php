@@ -27,13 +27,32 @@ add_action('wp_enqueue_scripts', 'my_files');
 
 add_action('after_setup_theme', 'theme_features');
 
+function my_customizer_settings($wp_customize) {
 
+	$wp_customize -> add_section('header_section', array(
+		'title' => 'Header Section'
+	));
 
+	$wp_customize->add_setting('header_tagline');
 
+	$wp_customize-> add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'header_tagline',
+			array(
+				'label' => 'Header Tagline',
+				'description' => 'Enter custom text here.',
+				'section' => 'header_section',
+				'settings' => 'header_tagline'
+			)
+		)
+	);
 
+	$wp_customize->selective_refresh->add_partial('header_tagline', array('selector'=>'#tagline'
+	));
+}
 
-
-
+add_action('customize_register', 'my_customizer_settings');
 
 
 ?>
