@@ -2,7 +2,9 @@
 	get_header();
 ?>
 
-	</div>
+
+	<header style="background-image: url(<?php echo get_theme_file_uri('/images/paperBoats.jpeg'); ?>); background-size: cover; background-position: center; height: 300px;">
+	</header>
 
 	<div class="container text-pink">
 		<div class="row py-5">
@@ -11,21 +13,25 @@
 			</div>
 			<div class="col-12 col-lg-8 p-5">
 				<h5 class="pl-5">Hello.</h5>
-				<h2 class="pb-4 pt-2 pl-5">BAUHAUS is a full-service digital agency. Let us craft meaningful experiences to help your brand stand out on the web.</h2>
-				<p class="pl-5">Whatever your business, whoever the user, we'll pinpoint your prime value proposition and help your company grow with a web presence that adapts to user feedback and advocates for your business across all platforms.
+				<h2 class="pb-4 pt-2 pl-5">Welcome to the blog</h2>
+				<p class="pl-5">Keep up with the latest news</p>
 				<button class="btn mt-4 py-3 px-4 d-block text-blue">Learn More</button>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-8 pl-5">
-				<img src="<?php echo get_theme_file_uri('/images/paperBoats.jpeg'); ?>" alt="BH" id="boats">
-			</div>
-			<div class="col-4">
-				<img src="http://res.cloudinary.com/irrelevantevan/image/upload/v1506541725/BAUHAUS/BH.png" alt="BH" id="BH">
-			</div>
-		</div>
-	</div>
 
+		<?php 
+			while(have_posts()) {
+				the_post(); ?>
+
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<p class="small">Posted by Evan in Uncategorized on 3/1/18</p>
+				<p><?php the_excerpt(); ?></p>
+
+			<?php }
+		?>	
+	
+	
+</div>
 
 
 <?php 
